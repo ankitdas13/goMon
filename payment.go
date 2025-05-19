@@ -329,9 +329,17 @@ func (r *Payment) UnmarshalJSON(data []byte) error {
 type PaymentAcquirerData struct {
 	// Bank transaction ID
 	BankTransactionID string `json:"bank_transaction_id"`
+	Rrn               string `json:"rrn"`
+	// transaction ID
+	TransactionID string `json:"transaction_id"`
+	// Upi transaction ID
+	UpiTransactionID string `json:"upi_transaction_id"`
 	// JSON contains metadata for fields, check presence with [respjson.Field.Valid].
 	JSON struct {
 		BankTransactionID respjson.Field
+		Rrn               respjson.Field
+		TransactionID     respjson.Field
+		UpiTransactionID  respjson.Field
 		ExtraFields       map[string]respjson.Field
 		raw               string
 	} `json:"-"`
@@ -395,8 +403,7 @@ const (
 type Refund struct {
 	// The unique identifier of the refund.
 	ID string `json:"id"`
-	// A dynamic object consisting of a unique reference number (either RRN, ARN or
-	// UTR) that is provided by the banking partner when a refund is processed.
+	// A dynamic array consisting of unique reference numbers.
 	AcquirerData RefundAcquirerData `json:"acquirer_data"`
 	// The amount to be refunded (in the smallest unit of currency).
 	Amount int64 `json:"amount"`
@@ -453,16 +460,23 @@ func (r *Refund) UnmarshalJSON(data []byte) error {
 	return apijson.UnmarshalRoot(data, r)
 }
 
-// A dynamic object consisting of a unique reference number (either RRN, ARN or
-// UTR) that is provided by the banking partner when a refund is processed.
+// A dynamic array consisting of unique reference numbers.
 type RefundAcquirerData struct {
-	// Acquirer reference number
-	Arn string `json:"arn,nullable"`
+	// Bank transaction ID
+	BankTransactionID string `json:"bank_transaction_id"`
+	Rrn               string `json:"rrn"`
+	// transaction ID
+	TransactionID string `json:"transaction_id"`
+	// Upi transaction ID
+	UpiTransactionID string `json:"upi_transaction_id"`
 	// JSON contains metadata for fields, check presence with [respjson.Field.Valid].
 	JSON struct {
-		Arn         respjson.Field
-		ExtraFields map[string]respjson.Field
-		raw         string
+		BankTransactionID respjson.Field
+		Rrn               respjson.Field
+		TransactionID     respjson.Field
+		UpiTransactionID  respjson.Field
+		ExtraFields       map[string]respjson.Field
+		raw               string
 	} `json:"-"`
 }
 

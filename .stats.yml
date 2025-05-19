@@ -1,4 +1,4 @@
 configured_endpoints: 36
-openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/rzp%2Fgomon-9c70f3b9c8f235cd2beeb71fb90d048e70a315275c6e672700f54e1e482ac3af.yml
-openapi_spec_hash: c342422ebc69c16dfcaa805ea1739f4c
+openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/rzp%2Fgomon-cda3f880e634697b88312065945494dc082afbd776d70016cce8cde212a11f63.yml
+openapi_spec_hash: de206b326680bd62675d1b9a9fd69a45
 config_hash: fc0bcd7e0ab0cc1b76baa27bbee39606

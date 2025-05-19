@@ -121,7 +121,8 @@ type QrCode struct {
 	// Indicates the status of the QR Code.
 	//
 	// Any of "active", "closed".
-	Status QrCodeStatus `json:"status"`
+	Status     QrCodeStatus       `json:"status"`
+	TaxInvoice []QrCodeTaxInvoice `json:"tax_invoice"`
 	// The type of the QR Code. Only 'upi_qr' is supported.
 	//
 	// Any of "upi_qr".
@@ -148,6 +149,7 @@ type QrCode struct {
 		PaymentsAmountReceived respjson.Field
 		PaymentsCountReceived  respjson.Field
 		Status                 respjson.Field
+		TaxInvoice             respjson.Field
 		Type                   respjson.Field
 		Usage                  respjson.Field
 		ExtraFields            map[string]respjson.Field
@@ -176,6 +178,50 @@ const (
 	QrCodeStatusActive QrCodeStatus = "active"
 	QrCodeStatusClosed QrCodeStatus = "closed"
 )
+
+// Tax invoice details for GST compliant transactions
+type QrCodeTaxInvoice struct {
+	// The GSTIN mentioned on the invoice. If not passed, it is picked up from the
+	// database.
+	BusinessGstin string `json:"business_gstin,required"`
+	// CESS Amount on the invoice in paise. If not provided, the transaction will
+	// default to the non-GST compliant UPI flow.
+	CessAmount int64 `json:"cess_amount,required"`
+	// Customer name on the invoice. If not provided, the transaction will default to
+	// non-GST compliant UPI flow.
+	CustomerName string `json:"customer_name,required"`
+	// Unix Timestamp that indicates the issue date of the invoice. If not provided, it
+	// will default to the current date.
+	Date int64 `json:"date,required"`
+	// GST amount on the invoice in paise. If not provided, the transaction will
+	// default to the non-GST compliant UPI flow.
+	GstAmount int64 `json:"gst_amount,required"`
+	// This is the invoice number against which the payment is collected. If not
+	// provided, the transaction will default to non-GST compliant UPI flow.
+	Number string `json:"number,required"`
+	// Indicates whether the transaction is interstate or intrastate
+	//
+	// Any of "interstate", "intrastate".
+	SupplyType string `json:"supply_type,required"`
+	// JSON contains metadata for fields, check presence with [respjson.Field.Valid].
+	JSON struct {
+		BusinessGstin respjson.Field
+		CessAmount    respjson.Field
+		CustomerName  respjson.Field
+		Date          respjson.Field
+		GstAmount     respjson.Field
+		Number        respjson.Field
+		SupplyType    respjson.Field
+		ExtraFields   map[string]respjson.Field
+		raw           string
+	} `json:"-"`
+}
+
+// Returns the unmodified JSON received from the API
+func (r QrCodeTaxInvoice) RawJSON() string { return r.JSON.raw }
+func (r *QrCodeTaxInvoice) UnmarshalJSON(data []byte) error {
+	return apijson.UnmarshalRoot(data, r)
+}
 
 // The type of the QR Code. Only 'upi_qr' is supported.
 type QrCodeType string

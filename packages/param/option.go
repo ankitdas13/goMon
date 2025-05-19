@@ -3,7 +3,7 @@ package param
 import (
 	"encoding/json"
 	"fmt"
-	shimjson "github.com/stainless-sdks/gomon-go/internal/encoding/json"
+	shimjson "github.com/ankitdas13/goMon/internal/encoding/json"
 	"time"
 )
 

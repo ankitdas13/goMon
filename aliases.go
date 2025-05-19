@@ -3,8 +3,8 @@
 package gomon
 
 import (
-	"github.com/stainless-sdks/gomon-go/internal/apierror"
-	"github.com/stainless-sdks/gomon-go/packages/param"
+	"github.com/ankitdas13/goMon/internal/apierror"
+	"github.com/ankitdas13/goMon/packages/param"
 )
 
 // aliased to make [param.APIUnion] private when embedding

@@ -2,7 +2,7 @@
 package json
 
 import (
-	"github.com/stainless-sdks/gomon-go/internal/encoding/json/shims"
+	"github.com/ankitdas13/goMon/internal/encoding/json/shims"
 	"reflect"
 	"time"
 )

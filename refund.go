@@ -9,11 +9,11 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/stainless-sdks/gomon-go/internal/apijson"
-	"github.com/stainless-sdks/gomon-go/internal/apiquery"
-	"github.com/stainless-sdks/gomon-go/internal/requestconfig"
-	"github.com/stainless-sdks/gomon-go/option"
-	"github.com/stainless-sdks/gomon-go/packages/param"
+	"github.com/ankitdas13/goMon/internal/apijson"
+	"github.com/ankitdas13/goMon/internal/apiquery"
+	"github.com/ankitdas13/goMon/internal/requestconfig"
+	"github.com/ankitdas13/goMon/option"
+	"github.com/ankitdas13/goMon/packages/param"
 )
 
 // RefundService contains methods and other services that help with interacting

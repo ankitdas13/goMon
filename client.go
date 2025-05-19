@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/stainless-sdks/gomon-go/internal/requestconfig"
-	"github.com/stainless-sdks/gomon-go/option"
+	"github.com/ankitdas13/goMon/internal/requestconfig"
+	"github.com/ankitdas13/goMon/option"
 )
 
 // Client creates a struct with services and top level methods that help with

@@ -1,4 +1,4 @@
-module github.com/stainless-sdks/gomon-go
+module github.com/ankitdas13/goMon
 
 go 1.21
 

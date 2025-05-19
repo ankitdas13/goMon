@@ -1,7 +1,7 @@
 package gomon
 
 import (
-	"github.com/stainless-sdks/gomon-go/packages/param"
+	"github.com/ankitdas13/goMon/packages/param"
 	"io"
 	"time"
 )

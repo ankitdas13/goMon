@@ -52,7 +52,7 @@ func TestPaymentQrCodeNewWithOptionalParams(t *testing.T) {
 	}
 }
 
-func TestPaymentQrCodeGetWithOptionalParams(t *testing.T) {
+func TestPaymentQrCodeGet(t *testing.T) {
 	t.Skip("skipped: tests are disabled for the time being")
 	baseURL := "http://localhost:4010"
 	if envURL, ok := os.LookupEnv("TEST_API_BASE_URL"); ok {
@@ -71,10 +71,6 @@ func TestPaymentQrCodeGetWithOptionalParams(t *testing.T) {
 		"id",
 		gomon.PaymentQrCodeGetParams{
 			PaymentID: "payment_id",
-			Count:     gomon.Int(100),
-			From:      gomon.Int(0),
-			Skip:      gomon.Int(0),
-			To:        gomon.Int(0),
 		},
 	)
 	if err != nil {

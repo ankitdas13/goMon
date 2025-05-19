@@ -48,7 +48,7 @@ func (r *PaymentQrCodeService) New(ctx context.Context, body PaymentQrCodeNewPar
 
 // Use this endpoint to retrieve the details of a QR Code by using a Payment Id.
 // [See docs](https://razorpay.com/docs/api/qr-codes/fetch-payment-id/)
-func (r *PaymentQrCodeService) Get(ctx context.Context, id string, query PaymentQrCodeGetParams, opts ...option.RequestOption) (res *QrCodeList, err error) {
+func (r *PaymentQrCodeService) Get(ctx context.Context, id string, query PaymentQrCodeGetParams, opts ...option.RequestOption) (res *QrCode, err error) {
 	opts = append(r.Options[:], opts...)
 	if id == "" {
 		err = errors.New("missing required id parameter")
@@ -314,14 +314,6 @@ const (
 type PaymentQrCodeGetParams struct {
 	// The unique identifier of the payment whose QR Codes are to be fetched.
 	PaymentID string `query:"payment_id,required" json:"-"`
-	// Number of QR Codes to be fetched. Default is 10. Maximum is 100.
-	Count param.Opt[int64] `query:"count,omitzero" json:"-"`
-	// UNIX timestamp, in seconds, from when QR Codes are to be fetched.
-	From param.Opt[int64] `query:"from,omitzero" json:"-"`
-	// Number of records to be skipped while fetching the QR Codes.
-	Skip param.Opt[int64] `query:"skip,omitzero" json:"-"`
-	// UNIX timestamp, in seconds, till when QR Codes are to be fetched.
-	To param.Opt[int64] `query:"to,omitzero" json:"-"`
 	paramObj
 }
 

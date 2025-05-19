@@ -1,7 +1,7 @@
 package sentinel_test
 
 import (
-	"github.com/stainless-sdks/gomon-go/internal/encoding/json/sentinel"
+	"github.com/ankitdas13/goMon/internal/encoding/json/sentinel"
 	"reflect"
 	"slices"
 	"testing"

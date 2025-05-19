@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stainless-sdks/gomon-go/packages/param"
+	"github.com/ankitdas13/goMon/packages/param"
 )
 
 type Struct struct {

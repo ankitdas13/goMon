@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stainless-sdks/gomon-go"
-	"github.com/stainless-sdks/gomon-go/internal"
-	"github.com/stainless-sdks/gomon-go/option"
+	"github.com/ankitdas13/goMon"
+	"github.com/ankitdas13/goMon/internal"
+	"github.com/ankitdas13/goMon/option"
 )
 
 type closureTransport struct {

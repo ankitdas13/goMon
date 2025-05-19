@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/stainless-sdks/gomon-go/packages/param"
+	"github.com/ankitdas13/goMon/packages/param"
 )
 
 var encoders sync.Map // map[reflect.Type]encoderFunc

@@ -3,9 +3,9 @@
 package gomon
 
 import (
-	"github.com/stainless-sdks/gomon-go/internal/apijson"
-	"github.com/stainless-sdks/gomon-go/option"
-	"github.com/stainless-sdks/gomon-go/packages/respjson"
+	"github.com/ankitdas13/goMon/internal/apijson"
+	"github.com/ankitdas13/goMon/option"
+	"github.com/ankitdas13/goMon/packages/respjson"
 )
 
 // PaymentRefundService contains methods and other services that help with

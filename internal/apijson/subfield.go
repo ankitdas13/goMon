@@ -1,7 +1,7 @@
 package apijson
 
 import (
-	"github.com/stainless-sdks/gomon-go/packages/respjson"
+	"github.com/ankitdas13/goMon/packages/respjson"
 	"reflect"
 )
 

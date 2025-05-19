@@ -266,7 +266,9 @@ type Payment struct {
 	// Order id, if provided.
 	OrderID string `json:"order_id"`
 	// The refund status of the payment.
-	RefundStatus string `json:"refund_status,nullable"`
+	RefundStatus  string `json:"refund_status,nullable"`
+	Reward        string `json:"reward,nullable"`
+	SourceChannel string `json:"source_channel,nullable"`
 	// The status of the payment.
 	//
 	// Any of "created", "authorized", "captured", "refunded", "failed".
@@ -306,6 +308,8 @@ type Payment struct {
 		Notes            respjson.Field
 		OrderID          respjson.Field
 		RefundStatus     respjson.Field
+		Reward           respjson.Field
+		SourceChannel    respjson.Field
 		Status           respjson.Field
 		Tax              respjson.Field
 		Vpa              respjson.Field

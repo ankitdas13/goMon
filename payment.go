@@ -327,6 +327,7 @@ func (r *Payment) UnmarshalJSON(data []byte) error {
 
 // A dynamic array consisting of unique reference numbers.
 type PaymentAcquirerData struct {
+	Arn string `json:"arn"`
 	// Bank transaction ID
 	BankTransactionID string `json:"bank_transaction_id"`
 	Rrn               string `json:"rrn"`
@@ -336,6 +337,7 @@ type PaymentAcquirerData struct {
 	UpiTransactionID string `json:"upi_transaction_id"`
 	// JSON contains metadata for fields, check presence with [respjson.Field.Valid].
 	JSON struct {
+		Arn               respjson.Field
 		BankTransactionID respjson.Field
 		Rrn               respjson.Field
 		TransactionID     respjson.Field
@@ -462,6 +464,7 @@ func (r *Refund) UnmarshalJSON(data []byte) error {
 
 // A dynamic array consisting of unique reference numbers.
 type RefundAcquirerData struct {
+	Arn string `json:"arn"`
 	// Bank transaction ID
 	BankTransactionID string `json:"bank_transaction_id"`
 	Rrn               string `json:"rrn"`
@@ -471,6 +474,7 @@ type RefundAcquirerData struct {
 	UpiTransactionID string `json:"upi_transaction_id"`
 	// JSON contains metadata for fields, check presence with [respjson.Field.Valid].
 	JSON struct {
+		Arn               respjson.Field
 		BankTransactionID respjson.Field
 		Rrn               respjson.Field
 		TransactionID     respjson.Field

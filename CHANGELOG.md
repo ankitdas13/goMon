@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.2 (2025-05-19)
+
+Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/ankitdas13/goMon/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
+
+### Features
+
+* **api:** update via SDK Studio ([8360ba2](https://github.com/ankitdas13/goMon/commit/8360ba27f4f1d44cfecf4ddc6dde4ec38e4faef8))
+
 ## 0.1.0-alpha.1 (2025-05-19)
 
 Full Changelog: [v0.0.1-alpha.0...v0.1.0-alpha.1](https://github.com/ankitdas13/goMon/compare/v0.0.1-alpha.0...v0.1.0-alpha.1)

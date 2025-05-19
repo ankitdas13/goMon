@@ -18,10 +18,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/stainless-sdks/gomon-go/internal"
-	"github.com/stainless-sdks/gomon-go/internal/apierror"
-	"github.com/stainless-sdks/gomon-go/internal/apiform"
-	"github.com/stainless-sdks/gomon-go/internal/apiquery"
+	"github.com/ankitdas13/goMon/internal"
+	"github.com/ankitdas13/goMon/internal/apierror"
+	"github.com/ankitdas13/goMon/internal/apiform"
+	"github.com/ankitdas13/goMon/internal/apiquery"
 )
 
 func getDefaultHeaders() map[string]string {

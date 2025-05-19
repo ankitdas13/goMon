@@ -7,7 +7,7 @@ package apijson
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/stainless-sdks/gomon-go/packages/param"
+	"github.com/ankitdas13/goMon/packages/param"
 	"reflect"
 	"strconv"
 	"sync"

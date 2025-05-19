@@ -8,9 +8,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/stainless-sdks/gomon-go"
-	"github.com/stainless-sdks/gomon-go/internal/testutil"
-	"github.com/stainless-sdks/gomon-go/option"
+	"github.com/ankitdas13/goMon"
+	"github.com/ankitdas13/goMon/internal/testutil"
+	"github.com/ankitdas13/goMon/option"
 )
 
 func TestOrderNewWithOptionalParams(t *testing.T) {
